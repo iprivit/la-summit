@@ -1,0 +1,23 @@
+{
+  "messageVersion": "1.0",
+  "agent": {
+    "name": "agt-1",
+    "id": "AAAAAAAAAA",
+    "alias": "BBBBBBBB",
+    "version": "DRAFT"
+  },
+  "inputText": "When is the 2024 Summer Olympics?",
+  "sessionId": "0000000000000000",
+  "sessionAttributes": {},
+  "promptSessionAttributes": {},
+  "apiPath": "/",
+  "actionGroup": "agt-1-ag-1",
+  "httpMethod": "get",
+  "parameters": [
+    {
+      "name": "search_string",
+      "type": "string",
+      "value": "When is the 2024 Summer Olympics?"
+    }
+  ]
+}

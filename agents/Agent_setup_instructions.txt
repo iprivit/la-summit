@@ -1,0 +1,25 @@
+Lambda function:
+1. Create a Lambda layer as per the instructions in 'assets/lambda_layer/Lambda_layer_setup_instructions.txt'. Make sure that the underlying architecture is 'x86_64'.
+2. Create the Lambda function with the following:
+	a. Included the provided code for the function. (Ref: lambda/lambda_function.py)
+	b. Add the layer created above.
+	c. Set the environment variables with the provided values. (Ref: lambda/Lambda_function_env_variables.txt)
+	d. Set the resource policy for the Bedrock Agent to invoke this function. (Ref: lambda/Lambda_function_resource_policy_for_Bedrock.json)
+	e. Create or re-use an existing IAM role.
+	f. Deploy the Lambda function.
+	g. Test with the provided test event. (Ref: lambda/Lambda_function_test_event.json)
+	
+Bedrock Agent:
+1. Upload the provided API Schema yaml file to a S3 bucket. (Ref: Bedrock_Agent_API_schema.yaml)
+2. Create a Bedrock Agent with the following:
+	a. Set the agent instructions to the provided agent instructions. (Ref: Agent_instructions_text_config.txt)
+	b. Set the API schema by browsing the file in the S3 bucket.
+	c. Choose Claude v3 Haiku as the LLM.
+	d. Allow the wizard to create a new IAM role.
+	e. Save.
+	f. Prepare.
+	g. Test with the prompt "When is the 2024 Summer Olympics?" and observe the agent trace.
+
+Bedrock Agent Alias:
+1. Create a new alias for the agent.
+2. Test with the prompt "When is the 2024 Summer Olympics?" and observe the agent trace.

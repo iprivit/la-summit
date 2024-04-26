@@ -1,0 +1,4 @@
+APP_NAME=WikipediaSearchApp
+LOG_LEVEL=INFO
+MAX_NUMBER_OF_RESULTS=15
+WIKIPEDIA_ENDPOINT_URL=https://api.wikimedia.org/core/v1/wikipedia/en/search/page

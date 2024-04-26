@@ -1,0 +1,29 @@
+---
+openapi: 3.0.0
+info:
+  title: Wikipedia Search API
+  description: APIs to perform Wikipedia search.
+  version: 1.0.0
+paths:
+  /:
+    get:
+      operationId: perform-wikipedia-search
+      summary: Perform a Wikipedia search.
+      description: This method takes any user query, performs a Wikipedia search and returns the response.
+      parameters:
+        - in: query
+          name: search_string
+          required: true
+          schema:
+            type: string
+          description: This is the search string for which the Wikipedia search should be performed.
+      responses:
+        "200":
+          description: A Wikipedia search result.
+          content:
+            application/json:
+              schema:
+                type: string
+                description: This the result of the Wikipedia search for the provided search string.
+        default:
+          description: Unexpected error

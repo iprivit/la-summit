@@ -1,0 +1,8 @@
+1. Choose an AWS Region and make sure all the artifacts are deployed in that region. Preferrably us-west-2.
+2. Choose a S3 bucket that CloudFormation can access and copy the following files into it. Don't create any folders (S3 key prefixes).
+	a. py312_opensearch-py_requests_and_requests-aws4auth.zip (It is in this folder in the Git repo: ../lambda_layer)
+	b. wikipedia_search_bedrock_agent.zip (It is in this folder in the Git repo: ../../agents)
+	c. API_schema.yaml (It is in this folder in the Git repo: ../../agents)
+3. Copy the following folder into a Git repo that CloudFormation can access:
+    notebooks
+4. Run the CloudFormation template (simplified-corrective-rag-cfn.yaml) through the CloudFormation console.
